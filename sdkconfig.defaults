@@ -1,0 +1,4 @@
+# Project defaults (committed). Machine-specific sdkconfig.esp32dev is ignored.
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=y
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_FULL=y
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=4096
