@@ -1,0 +1,29 @@
+/*
+ * config.example - PLACEHOLDERS ONLY. No real secrets here.
+ * To use: copy this file to src/secrets.h (git-ignored)
+ * and fill in your own values.
+ */
+#pragma once
+
+#define PLANT_ID            "plant-01"
+
+/* Wi-Fi */
+#define WIFI_SSID           "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD       "YOUR_WIFI_PASSWORD"
+
+/* Telegram */
+#define TELEGRAM_BOT_TOKEN  "YOUR_BOT_TOKEN"
+#define TELEGRAM_CHAT_ID    "YOUR_CHAT_ID"
+
+/* Gmail SMTP (use an app password, not your real password) */
+#define SMTP_USER           "your.account@gmail.com"
+#define SMTP_APP_PASSWORD   "YOUR_16_CHAR_APP_PASSWORD"
+#define SMTP_TO             "recipient@example.com"
+
+/* WhatsApp Cloud API */
+#define WHATSAPP_TOKEN      "YOUR_ACCESS_TOKEN"
+#define WHATSAPP_PHONE_ID   "YOUR_PHONE_NUMBER_ID"
+#define WHATSAPP_TO         "YOUR_VERIFIED_RECIPIENT_NUMBER"
+
+/* X (Twitter) - per the approach your instructor approves */
+#define X_ACCESS_TOKEN      "YOUR_X_TOKEN"
