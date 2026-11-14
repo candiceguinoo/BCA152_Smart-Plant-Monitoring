@@ -1,0 +1,18 @@
+# Build output
+.pio/
+build/
+# Editor
+.vscode/
+.idea/
+# Generated config (machine-specific)
+sdkconfig.esp32dev
+sdkconfig.old
+# SECRETS - never commit
+src/secrets.h
+secrets.h
+config.h
+*.env
+.env
+# OS
+.DS_Store
+Thumbs.db
