@@ -1,0 +1,24 @@
+﻿Verbosity level can be increased via `-v, -vv, or -vvv` option
+Collected 1 tests
+
+Processing test_logic in native environment
+--------------------------------------------------------------------------------
+Building...
+Testing...
+test\test_logic\test_main.c:103: test_adc_rejects_rails_and_out_of_range	[PASSED]
+test\test_logic\test_main.c:104: test_adc_accepts_normal_values	[PASSED]
+test\test_logic\test_main.c:105: test_cal_valid_both_directions	[PASSED]
+test\test_logic\test_main.c:106: test_cal_rejects_bad_values	[PASSED]
+test\test_logic\test_main.c:107: test_index_dry_higher_than_wet	[PASSED]
+test\test_logic\test_main.c:108: test_index_wet_higher_than_dry	[PASSED]
+test\test_logic\test_main.c:109: test_index_clamps_outside_reference_range	[PASSED]
+test\test_logic\test_main.c:110: test_index_invalid_inputs_return_minus_one	[PASSED]
+test\test_logic\test_main.c:111: test_dht11_limits	[PASSED]
+test\test_logic\test_main.c:112: test_stale_detection	[PASSED]
+----------------- native:test_logic [PASSED] Took 2.39 seconds -----------------
+
+=================================== SUMMARY ===================================
+Environment    Test        Status    Duration
+-------------  ----------  --------  ------------
+native         test_logic  PASSED    00:00:02.392
+================= 10 test cases: 10 succeeded in 00:00:02.392 =================
