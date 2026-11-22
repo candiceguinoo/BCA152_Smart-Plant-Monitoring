@@ -1,0 +1,83 @@
+﻿Verbosity level can be increased via `-v, -vv, or -vvv` option
+Collected 4 tests
+
+Processing test_format in native environment
+--------------------------------------------------------------------------------
+Building...
+Testing...
+test\test_format\test_main.c:131: test_alert_message_exact	[PASSED]
+test\test_format\test_main.c:132: test_message_contains_required_fields	[PASSED]
+test\test_format\test_main.c:133: test_recovery_message	[PASSED]
+test\test_format\test_main.c:134: test_initial_and_demo_labels	[PASSED]
+test\test_format\test_main.c:135: test_invalid_sensor_values_never_shown_as_numbers	[PASSED]
+test\test_format\test_main.c:136: test_unavailable_moisture_omits_percentage	[PASSED]
+test\test_format\test_main.c:137: test_truncation_returns_error_and_terminates	[PASSED]
+test\test_format\test_main.c:138: test_bad_arguments	[PASSED]
+test\test_format\test_main.c:139: test_subject	[PASSED]
+---------------- native:test_format [PASSED] Took 2.09 seconds ----------------
+
+Processing test_logic in native environment
+--------------------------------------------------------------------------------
+Building...
+Testing...
+test\test_logic\test_main.c:103: test_adc_rejects_rails_and_out_of_range	[PASSED]
+test\test_logic\test_main.c:104: test_adc_accepts_normal_values	[PASSED]
+test\test_logic\test_main.c:105: test_cal_valid_both_directions	[PASSED]
+test\test_logic\test_main.c:106: test_cal_rejects_bad_values	[PASSED]
+test\test_logic\test_main.c:107: test_index_dry_higher_than_wet	[PASSED]
+test\test_logic\test_main.c:108: test_index_wet_higher_than_dry	[PASSED]
+test\test_logic\test_main.c:109: test_index_clamps_outside_reference_range	[PASSED]
+test\test_logic\test_main.c:110: test_index_invalid_inputs_return_minus_one	[PASSED]
+test\test_logic\test_main.c:111: test_dht11_limits	[PASSED]
+test\test_logic\test_main.c:112: test_stale_detection	[PASSED]
+----------------- native:test_logic [PASSED] Took 1.69 seconds -----------------
+
+Processing test_policy in native environment
+--------------------------------------------------------------------------------
+Building...
+Testing...
+test\test_policy\test_main.c:130: test_reason_initial_report	[PASSED]
+test\test_policy\test_main.c:131: test_reason_alert_into_dry_or_wet	[PASSED]
+test\test_policy\test_main.c:132: test_reason_recovery	[PASSED]
+test\test_policy\test_main.c:133: test_reason_none_when_no_change_or_unknown	[PASSED]
+test\test_policy\test_main.c:134: test_reason_labels	[PASSED]
+test\test_policy\test_main.c:135: test_cooldown_minimum_enforced	[PASSED]
+test\test_policy\test_main.c:136: test_cooldown_blocks_duplicate_alert	[PASSED]
+test\test_policy\test_main.c:137: test_cooldown_allows_after_period	[PASSED]
+test\test_policy\test_main.c:138: test_cooldown_is_per_state	[PASSED]
+test\test_policy\test_main.c:139: test_recovery_has_its_own_cooldown	[PASSED]
+test\test_policy\test_main.c:140: test_initial_and_demo_bypass_and_do_not_record	[PASSED]
+test\test_policy\test_main.c:141: test_cooldown_survives_clock_jump_backwards	[PASSED]
+test\test_policy\test_main.c:142: test_cooldown_rejects_unknown_state_alert	[PASSED]
+---------------- native:test_policy [PASSED] Took 2.45 seconds ----------------
+
+Processing test_state in native environment
+--------------------------------------------------------------------------------
+Building...
+Testing...
+test\test_state\test_main.c:173: test_thresholds_valid	[PASSED]
+test\test_state\test_main.c:174: test_thresholds_invalid	[PASSED]
+test\test_state\test_main.c:175: test_classify_basic	[PASSED]
+test\test_state\test_main.c:176: test_classify_boundaries	[PASSED]
+test\test_state\test_main.c:177: test_hysteresis_leaving_dry	[PASSED]
+test\test_state\test_main.c:178: test_hysteresis_leaving_wet	[PASSED]
+test\test_state\test_main.c:179: test_classify_dry_straight_to_wet	[PASSED]
+test\test_state\test_main.c:180: test_classify_invalid_input_is_unknown	[PASSED]
+test\test_state\test_main.c:181: test_state_names	[PASSED]
+test\test_state\test_main.c:182: test_tracker_initial_state_needs_three	[PASSED]
+test\test_state\test_main.c:183: test_tracker_change_needs_three_in_a_row	[PASSED]
+test\test_state\test_main.c:184: test_tracker_return_to_confirmed_resets_streak	[PASSED]
+test\test_state\test_main.c:185: test_tracker_invalid_reading_breaks_streak	[PASSED]
+test\test_state\test_main.c:186: test_tracker_invalid_never_confirms_first_state	[PASSED]
+test\test_state\test_main.c:187: test_tracker_flapping_never_confirms	[PASSED]
+test\test_state\test_main.c:188: test_tracker_required_minimum_is_one	[PASSED]
+----------------- native:test_state [PASSED] Took 2.21 seconds -----------------
+
+=================================== SUMMARY ===================================
+Environment    Test         Status    Duration
+-------------  -----------  --------  ------------
+native         test_format  PASSED    00:00:02.092
+native         test_logic   PASSED    00:00:01.689
+native         test_policy  PASSED    00:00:02.449
+native         test_state   PASSED    00:00:02.215
+================= 48 test cases: 48 succeeded in 00:00:08.445 =================
